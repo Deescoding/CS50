@@ -1,0 +1,115 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int age = get_int("What's your age?\n");
+    int days = age * 365;
+    printf("You are at least %i days old.\n", days);
+}
+//prints 
+
+$ ./int
+What's your age?
+56
+You are at least 20440 days old.
+$ 
+
+
+//simplifying calculating the age through days 
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int age = get_int("What's your age?\n");
+    printf("You are at least %i days old.\n", age * 365);
+}
+// we can jsut add age * 365 in the secind line of code, now lets simplify it further 
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    
+    printf("You are at least %i days old.\n", get_int("What's your age?\n") * 365);
+}
+
+//prints 
+$ ./int
+What's your age?
+50
+You are at least 18250 days old.
+$ 
+
+FLOAT 
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main (void)
+{
+    float price = get_float("What's the price?\n");
+    printf("Your total is %f.\n", price * 1.0625);
+}
+
+//prints 
+$ ./float
+What's the price?
+100
+Your total is 106.250000.
+$ 
+
+//if we want this to display a lower decimal value then we have to make some changes:
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main (void)
+{
+    float price = get_float("What's the price?\n");
+    printf("Your total is %.2f.\n", price * 1.0625);
+}
+
+//as you can see we added a .2 before the f in the equation %f to limit the decimal to 2
+
+//prints:
+ ./float
+What's the price?
+100
+Your total is 106.25.
+$ 
+
+PARITY 
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main (void)
+{
+    int n = get_int("n: ");
+    
+    if (n % 2 == 0)
+    {
+        printf("even\n");
+    }
+    else 
+    {
+        printf("odd\n");
+    }
+}
+
+//prints:
+
+$ ./parity
+n: 23
+odd
+$ 
+
+
+
+
+
+
